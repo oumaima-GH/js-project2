@@ -187,22 +187,17 @@ console.log('is ' + num + ' prime? ' + isPrime(num))
 
 // Fibonacci Sequence: Implement a function to generate the Fibonacci sequence up to a given number of terms. (search on the net )
 
-function generateFibonacci(numTerms) {
-    let fibonacciSeq = [];
-    
-    if (numTerms === 1) {
-        fibonacciSeq.push(0);
-    } else if (numTerms >= 2) {
-        fibonacciSeq.push(0, 1);
+function generateFibonacci(nb) {
+    let fibonacciSeq = [0, 1];
 
-        for (let i = 2; i < numTerms; i++) {
-            fibonacciSeq.push(fibonacciSeq[i - 1] + fibonacciSeq[i - 2]);
-        }
+    for (let i = 2; i < nb; i++) {
+        fibonacciSeq.push(fibonacciSeq[i - 1] + fibonacciSeq[i - 2]);
     }
 
     return fibonacciSeq;
 }
 
-const numTerms = 10;
-const fibonacciSequence = generateFibonacci(numTerms);
-console.log(`Fibonacci sequence up to ${numTerms} terms:`, fibonacciSequence);
+const nb = 13;
+const fibonacciSequence = generateFibonacci(nb);
+console.log(`Fibonacci sequence up to ${nb}:`, fibonacciSequence);
+
