@@ -164,11 +164,11 @@ console.log("Factorial of", numb, "is", factorial(numb))
 // Prime Number Check: Create a function to check if a number is prime or not.
 
 function isPrime(number) {
-    if (number <= 1) {
+    if (number < 2) {
         return false
     }
 
-    for (let i = 2; i * i <= number; i++) {
+    for (let i = 2; i < number; i++) {
         if (number % i === 0) {
             return false
         }
@@ -177,7 +177,7 @@ function isPrime(number) {
     return true
 }
 
-let num = 17
+let num = 10
 console.log('is ' + num + ' prime? ' + isPrime(num))
 
 
